@@ -1,0 +1,70 @@
+<div class="col-md-6 offset-md-3 card p-0 border-0 rounded-0 mb-5">
+    <div class="card border-0 rounded-0 card0">
+        <h1 class="mb-0">Hello!</h1>
+        <p>Please register your account</p>
+        <form (ngSubmit)="onSubmit()">
+
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0">Username</label>
+                <input type="text" class="form-control" id="userName" [(ngModel)]="patient.userName" name="userName">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="patient.password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> First Name</label>
+                <input type="text" class="form-control" id="fullName" [(ngModel)]="patient.firstName" name="firstName">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Last Name</label>
+                <input type="text" class="form-control" id="lastName" [(ngModel)]="patient.lastName" name="lastName">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> EmailId</label>
+                <input type="text" class="form-control" id="emailId" [(ngModel)]="patient.emailId" name="emailId">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0">Mobile No</label>
+                <input type="text" class="form-control" id="mobNo" [(ngModel)]="patient.mobNo" name="mobNo">
+            </div>
+
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Age</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" name="age">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Weight</label>
+                <input type="text" class="form-control" id="weight" [(ngModel)]="patient.weight" name="weight">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Height</label>
+                <input type="text" class="form-control" id="height" [(ngModel)]="patient.height" name="height">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Sex</label>
+                <input type="text" class="form-control" id="sex" [(ngModel)]="patient.sex" name="sex">
+            </div>
+
+
+
+
+
+            <div class="row justify-content-center mt-4">
+                <button class="btn btn-yellow px-5" type="submit">Register</button>
+            </div>
+        </form>
+        <div class="row justify-content-center mt-3"> <small class="text-dim">or login with</small> </div>
+        <div class="row justify-content-center mt-3 mb-2"> <img class="icon mr-2" src="https://i.imgur.com/j8ZGqG2.png"> <img class="icon ml-2" src="https://i.imgur.com/AX2lVgH.png"> </div>
+    </div> <img src="https://thumbs.dreamstime.com/z/telemedicine-concept-doctor-stethoscope-computer-laptop-screen-133911044.jpg" style="max-height: 300px;" class="mt-auto">
+</div>

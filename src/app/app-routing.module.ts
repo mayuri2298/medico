@@ -8,6 +8,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 const routes: Routes = [
+  {path:'',redirectTo:'/login',pathMatch:'full'},
   { path:'register',component:RegisterComponent },
   { path:'login',component:LoginComponent },
   { path:'home',component:HomeComponent },

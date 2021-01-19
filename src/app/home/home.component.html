@@ -7,14 +7,10 @@
                 <li class="nav-item"> <a class="nav-link" href="specialist">Specialist</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Diseases</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">contact</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-search"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="patient_profile">My Profile<i class="fa fa-search"></i></a> </li>
+                <li><button (click)="logout()" class="btn btn-outline-info btn-sm">Logout</button></li>
             </ul>
-            <div class="d-flex flex-column sim">
-                <a href="patient_profile/{{patient.patientId}}">
-                    <button (click)="patientDetails(patient.patientId)"> <img src="https://i.imgur.com/C4egmYM.jpg" class="rounded-circle" width="45"> </button>
-                </a>
-            </div>
         </div>
     </div>
 </nav>

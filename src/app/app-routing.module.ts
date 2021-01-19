@@ -9,13 +9,14 @@ import { BookAppointmentComponent } from './book-appointment/book-appointment.co
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
+  { path:'patient_profile',redirectTo:'login' },
   { path:'register',component:RegisterComponent },
   { path:'login',component:LoginComponent },
   { path:'home',component:HomeComponent },
   { path:'specialist',component:SpecialistComponent },
   { path:'specialist/:doctorId',component:DoctorProfileComponent },
   { path:'specialist/book_apt/:doctorId',component:BookAppointmentComponent },
-  { path:'patient_profile/:patientId',component:PatientProfileComponent }
+  { path:'home/patient_profile/:patientId',component:PatientProfileComponent }
 ];
 
 @NgModule({

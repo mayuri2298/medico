@@ -18,6 +18,8 @@ export class PatientService {
     return this.http.post(`${this.baseURL}`+"/login", patient);
   }
 
-  loginuser(){
-}
+  getPatientById(patientId: number): Observable<Patient>{
+    return this.http.get<Patient>(`${this.baseURL}`+"/patient_profile/"+`${patientId}`);
+  }
+  
 }

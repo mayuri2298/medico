@@ -3,6 +3,7 @@ import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   patient: Patient = new Patient();
- 
+  invalidLogin = false
   
   constructor(private patientService : PatientService,private router: Router, private http: HttpClient) { 
     
@@ -19,19 +20,24 @@ export class LoginComponent implements OnInit {
   savePatient(){
     this.patientService.loginPatient(this.patient).subscribe( data =>{
       console.log(data);
+      sessionStorage.setItem("username",this.patient.userName);
       this.router.navigate(['home']);
-
+      
     },
+    
     error => console.log(error));
   }
 
   onSubmit(){
     console.log(this.patient);
+
     this.savePatient();
   }
   
   
   ngOnInit(): void {
   }
-
+  
 }
+
+

@@ -11,6 +11,8 @@ import { SpecialistComponent } from './specialist/specialist.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
+import { LogoutComponent } from './logout/logout.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PatientProfileComponent } from './patient-profile/patient-profile.compo
     SpecialistComponent,
     DoctorProfileComponent,
     BookAppointmentComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
+    LogoutComponent,
+    
   ],
   imports: [
     BrowserModule,

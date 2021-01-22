@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent implements OnInit {
   patient: Patient = new Patient();
   invalidLogin = false
-  
+  message: any
   constructor(private patientService : PatientService,private router: Router, private http: HttpClient) { 
     
   }
@@ -20,9 +20,17 @@ export class LoginComponent implements OnInit {
   savePatient(){
     this.patientService.loginPatient(this.patient).subscribe( data =>{
       console.log(data);
-      sessionStorage.setItem("username",this.patient.userName);
-      this.router.navigate(['home']);
-      
+      this.message=data;
+      var obj = JSON.parse(this.message);
+      console.log(obj.message);
+      if(obj.message=="null"){
+        this.router.navigate(['login']);
+      }else{
+        sessionStorage.setItem("patientId",obj.patientId);
+        this.router.navigate(['home']);
+        console.log(this.message);
+      }
+    
     },
     
     error => console.log(error));

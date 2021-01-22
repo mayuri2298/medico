@@ -11,12 +11,12 @@ export class AuthenticationService {
   constructor(private patientService: PatientService) { }
   
   isUserLoggedIn() {
-    let user = sessionStorage.getItem('username')
+    let user = sessionStorage.getItem('patientId')
     console.log(!(user === null))
     return !(user === null)
   }
 
   logOut() {
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('patientId')
   }
 }

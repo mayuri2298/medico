@@ -8,10 +8,13 @@
                 <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Diseases</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="patient_profile/{{patient.patientId}}">My profile</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="profile/{{a}}">My Profile</a> </li>
+                <li class="nav-item"> <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="/logout">Logout</a></li>
+
+
+                <!-- <li class="nav-item"> <a class="nav-link" href="profile/{{patient.patientId}}">My profile</a> </li> -->
                 <!-- <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="patient_profile/{{patient.patientId}}">My Profile</a> </li> -->
                 <!-- <li><button (click)="logout()" class="btn btn-outline-info btn-sm">Logout</button></li> -->
-                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout">Logout</a></li>
 
             </ul>
         </div>

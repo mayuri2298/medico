@@ -15,11 +15,14 @@ export class PatientService {
   }
 
   loginPatient(patient: Patient): Observable<Object>{
-    return this.http.post(`${this.baseURL}`+"/login", patient);
+    return this.http.post(`${this.baseURL}`+"/login", patient,{responseType:'text' as 'json'});
   }
 
   getPatientById(patientId: number): Observable<Patient>{
     return this.http.get<Patient>(`${this.baseURL}`+"/patient_profile/"+`${patientId}`);
   }
-  
+  updatePatient(patientId: number, patient: Patient): Observable<Object> {
+    return this.http.put(`${this.baseURL}`+"/patient_update/"+`${patientId}`,patient);
+  }
+
 }

@@ -1,4 +1,65 @@
-<div class="banner3">
+<div class="col-md-6 offset-md-3 card p-0 border-0 rounded-0 mb-5">
+    <div class="card border-0 rounded-0 card0">
+        <h1 class="mb-0">Hello!</h1>
+        <p>Please register your account</p>
+        <form (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0">First Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="appointment.name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0">Last Name</label>
+                <input type="text" class="form-control" id="surname" [(ngModel)]="appointment.surname" name="surname">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0">Mobile No</label>
+                <input type="text" class="form-control" id="mobNo" [(ngModel)]="appointment.mobNo" name="mobNo">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Date</label>
+                <input type="date" class="form-control" id="date" [(ngModel)]="appointment.date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold mb-0"> Time</label>
+                <input type="time" class="form-control" id="time" [(ngModel)]="appointment.time" name="time">
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <button class="btn btn-yellow px-5" type="submit">Book</button>
+            </div>
+
+        </form>
+        <button (click)="routeBack()">Back</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="banner3">
     <div class="py-5 banner" style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/form-banners/banner2/banner-bg.jpg);">
         <div class="container">
             <div class="row">
@@ -44,4 +105,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

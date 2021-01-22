@@ -10,15 +10,16 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  a = sessionStorage.getItem('patientId');
   
-  patient: Patient = new Patient();
-
+  
   constructor(private patientService : PatientService,private router: Router, private http: HttpClient,public loginService:AuthenticationService) { }
 
   ngOnInit(): void {
+  
   }
   patientDetails(patientId:number){
-    this.router.navigate(['patient_profile',patientId]);
+    this.router.navigate(['profile',]);
   }
   
   logout() {

@@ -12,6 +12,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { LogoutComponent } from './logout/logout.component';
     BookAppointmentComponent,
     PatientProfileComponent,
     LogoutComponent,
+    EditProfileComponent,
     
   ],
   imports: [

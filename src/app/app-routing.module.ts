@@ -9,8 +9,9 @@ import { BookAppointmentComponent } from './book-appointment/book-appointment.co
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from './auth-guard.service';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 const routes: Routes = [
-  {path:'',redirectTo:'/login',pathMatch:'full'},
+  //{path:'',redirectTo:'/login',pathMatch:'full'},
   //{ path:'',component:HomeComponent,canActivate:[AuthGuardService] },
   //{ path:'patient_profile',redirectTo:'login' },
   { path:'register',component:RegisterComponent },
@@ -19,8 +20,9 @@ const routes: Routes = [
   { path:'specialist',component:SpecialistComponent,canActivate:[AuthGuardService] },
   { path:'specialist/:doctorId',component:DoctorProfileComponent,canActivate:[AuthGuardService] },
   { path:'specialist/book_apt/:doctorId',component:BookAppointmentComponent,canActivate:[AuthGuardService] },
-  { path:'patient_profile/:patientId',component:PatientProfileComponent,canActivate:[AuthGuardService] },
-  { path:'logout',component:LogoutComponent,canActivate:[AuthGuardService] }
+  { path:'profile/:patientId',component:PatientProfileComponent,canActivate:[AuthGuardService] },
+  { path:'logout',component:LogoutComponent,canActivate:[AuthGuardService] },
+  { path:'edit-profile/:patientId',component:EditProfileComponent }
 ];
 
 @NgModule({

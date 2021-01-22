@@ -22,4 +22,7 @@ export class PatientProfileComponent implements OnInit {
     });
     
   }
+  updatePatient(patientId:number){
+    this.router.navigate(['edit-profile',patientId]);
+  }
 }

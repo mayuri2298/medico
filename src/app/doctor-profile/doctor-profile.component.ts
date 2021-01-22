@@ -19,7 +19,8 @@ export class DoctorProfileComponent implements OnInit {
     this.doctor = new Doctor();
     this.doctorService.getDoctorById(this.doctorId).subscribe(data =>{
       this.doctor = data;
-    })
+    },
+    error => console.log(error));
     
   }
   bookAppointment(doctorId : number){
